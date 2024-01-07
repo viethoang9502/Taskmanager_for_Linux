@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Taskmanager</class>
+ <widget class="QMainWindow" name="Taskmanager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1178</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{ background-color: rgb(192, 191, 188);}	
+
+#leftMenuSubContainer{
+	background-color: #1f232a;
+}
+QPushButton{
+	text-align: left;
+	padding: 5px 6px;
+}
+#frame{
+	background-color: #16191d;
+	border-radius: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QWidget" name="Mainbody" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>1161</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1154</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(119, 118, 123);
+background-color: rgb(239, 239, 239);
+background-color: rgb(154, 153, 150);</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QWidget" name="leftMenuSubContainer" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #1f232a;
+background-color: rgb(222, 221, 218);</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QToolButton" name="menu">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Menu</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/menu.svg</normaloff>../../icon/menu.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="processesBtn">
+             <property name="toolTip">
+              <string>Processes</string>
+             </property>
+             <property name="text">
+              <string>Processes</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/grid.svg</normaloff>../../icon/grid.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="performanceBtn">
+             <property name="toolTip">
+              <string>Performance</string>
+             </property>
+             <property name="text">
+              <string>Performance</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/zap.svg</normaloff>../../icon/zap.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="apphistoryBtn">
+             <property name="toolTip">
+              <string>App history</string>
+             </property>
+             <property name="text">
+              <string>App history</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/pie-chart.svg</normaloff>../../icon/pie-chart.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="startupusersBtn">
+             <property name="toolTip">
+              <string>Startup apps</string>
+             </property>
+             <property name="text">
+              <string>Startup apps</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/power.svg</normaloff>../../icon/power.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="usersBtn">
+             <property name="toolTip">
+              <string>Users</string>
+             </property>
+             <property name="text">
+              <string>Users</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/user.svg</normaloff>../../icon/user.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="detailsBtn">
+             <property name="toolTip">
+              <string>Details</string>
+             </property>
+             <property name="text">
+              <string>Details</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/align-justify.svg</normaloff>../../icon/align-justify.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="servicesBtn">
+             <property name="toolTip">
+              <string>Services</string>
+             </property>
+             <property name="text">
+              <string>Services</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/cpu.svg</normaloff>../../icon/cpu.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="settingBtn">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="toolTip">
+              <string>Settings</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Settings</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../icon/settings.svg</normaloff>../../icon/settings.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QWidget" name="centralMenu" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #1f232a;
+background-color: rgb(192, 191, 188);
+QPushButton {
+    border: none;
+};
+background-color: rgb(154, 153, 150);</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0" colspan="2">
+         <widget class="QStackedWidget" name="stackedWidget_2">
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="processesWidget">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>737</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>ArrowCursor</cursorShape>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(119, 118, 123);</string>
+              </property>
+              <property name="text">
+               <string>PROCESSES</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+              <property name="margin">
+               <number>30</number>
+              </property>
+              <property name="indent">
+               <number>333</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="performanceWidget">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_1">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>737</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(119, 118, 123);</string>
+              </property>
+              <property name="text">
+               <string>PERFORMANCE</string>
+              </property>
+              <property name="margin">
+               <number>30</number>
+              </property>
+              <property name="indent">
+               <number>333</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_1"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="apphistoryWidget">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>737</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(119, 118, 123);</string>
+              </property>
+              <property name="text">
+               <string>APPHISTORY</string>
+              </property>
+              <property name="margin">
+               <number>30</number>
+              </property>
+              <property name="indent">
+               <number>333</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="appHistoryTable"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
